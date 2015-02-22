@@ -1,0 +1,19 @@
+.removeBook {
+	color: red;
+}
+
+thead > tr {
+	background: #95b3d7;
+}
+
+tbody > tr:nth-child(even) {
+	background: white;
+}
+
+tbody > tr:nth-child(odd) {
+	background: #dbe5f0;
+}
+
+tr {
+	border-color: #95b3d7;
+}
