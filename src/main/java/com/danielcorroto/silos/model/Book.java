@@ -10,10 +10,16 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "book")
 public class Book {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	@Column(nullable = false)
 	private String name;
+	@Column(nullable = false)
 	private String author;
+	@Column
 	private String style;
+	@Column(nullable = false)
 	private String location;
 
 	public Book() {
@@ -27,8 +33,6 @@ public class Book {
 		this.location = location;
 	}
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
 		return id;
 	}
@@ -37,7 +41,6 @@ public class Book {
 		this.id = id;
 	}
 
-	@Column(nullable = false)
 	public String getName() {
 		return name;
 	}
@@ -46,7 +49,6 @@ public class Book {
 		this.name = name;
 	}
 
-	@Column(nullable = false)
 	public String getAuthor() {
 		return author;
 	}
@@ -55,7 +57,6 @@ public class Book {
 		this.author = author;
 	}
 
-	@Column
 	public String getStyle() {
 		return style;
 	}
@@ -64,7 +65,6 @@ public class Book {
 		this.style = style;
 	}
 
-	@Column(nullable = false)
 	public String getLocation() {
 		return location;
 	}
